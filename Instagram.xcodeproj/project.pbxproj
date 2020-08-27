@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		F7868BA124F83BF200BED833 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7868BA024F83BF200BED833 /* Assets.xcassets */; };
 		F7868BA424F83BF200BED833 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7868BA224F83BF200BED833 /* LaunchScreen.storyboard */; };
 		F7868BAF24F83BF200BED833 /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7868BAE24F83BF200BED833 /* InstagramTests.swift */; };
+		F7868BBA24F8520400BED833 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7868BB924F8520400BED833 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		F7868BAA24F83BF200BED833 /* InstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7868BAE24F83BF200BED833 /* InstagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTests.swift; sourceTree = "<group>"; };
 		F7868BB024F83BF200BED833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7868BB924F8520400BED833 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,6 @@
 				EB3C4D54D61FAF6DF507CB3E /* Pods-InstagramTests.debug.xcconfig */,
 				6256A91BBA6AE39F9F53B212 /* Pods-InstagramTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -114,6 +115,7 @@
 		F7868B9324F83BF100BED833 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				F7868BB924F8520400BED833 /* GoogleService-Info.plist */,
 				F7868B9424F83BF100BED833 /* AppDelegate.swift */,
 				F7868B9624F83BF100BED833 /* SceneDelegate.swift */,
 				F7868B9824F83BF100BED833 /* HomeViewController.swift */,
@@ -222,6 +224,7 @@
 				F7868BA424F83BF200BED833 /* LaunchScreen.storyboard in Resources */,
 				F7868BA124F83BF200BED833 /* Assets.xcassets in Resources */,
 				F7868B9C24F83BF100BED833 /* Main.storyboard in Resources */,
+				F7868BBA24F8520400BED833 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
