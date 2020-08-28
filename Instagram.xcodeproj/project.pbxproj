@@ -18,6 +18,7 @@
 		F7868BA424F83BF200BED833 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7868BA224F83BF200BED833 /* LaunchScreen.storyboard */; };
 		F7868BAF24F83BF200BED833 /* InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7868BAE24F83BF200BED833 /* InstagramTests.swift */; };
 		F7868BBA24F8520400BED833 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7868BB924F8520400BED833 /* GoogleService-Info.plist */; };
+		F7868BBE24F9A11000BED833 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7868BBD24F9A11000BED833 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		F7868BAE24F83BF200BED833 /* InstagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTests.swift; sourceTree = "<group>"; };
 		F7868BB024F83BF200BED833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7868BB924F8520400BED833 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F7868BBD24F9A11000BED833 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				F7868B9424F83BF100BED833 /* AppDelegate.swift */,
 				F7868B9624F83BF100BED833 /* SceneDelegate.swift */,
 				F7868B9824F83BF100BED833 /* HomeViewController.swift */,
+				F7868BBD24F9A11000BED833 /* LoginViewController.swift */,
 				F7868B9A24F83BF100BED833 /* Main.storyboard */,
 				F7868BA024F83BF200BED833 /* Assets.xcassets */,
 				F7868BA224F83BF200BED833 /* LaunchScreen.storyboard */,
@@ -309,6 +312,7 @@
 				F7868B9F24F83BF100BED833 /* Instagram.xcdatamodeld in Sources */,
 				F7868B9924F83BF100BED833 /* HomeViewController.swift in Sources */,
 				F7868B9524F83BF100BED833 /* AppDelegate.swift in Sources */,
+				F7868BBE24F9A11000BED833 /* LoginViewController.swift in Sources */,
 				F7868B9724F83BF100BED833 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
