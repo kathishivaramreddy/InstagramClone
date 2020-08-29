@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class LoginViewController: UIViewController {
     
@@ -209,8 +210,22 @@ class LoginViewController: UIViewController {
         
         //TODO:- Implement Login Functionality
     }
-    @objc private func didTapPrivacyButton() {}
-    @objc private func didTapTermsButton() {}
+    @objc private func didTapPrivacyButton() {
+        
+        guard let url = URL(string: "https://help.instagram.com/519522125107875") else { return }
+        let privacySafariView = SFSafariViewController(url: url)
+        
+        self.present(privacySafariView, animated: false)
+    }
+    
+    @objc private func didTapTermsButton() {
+        
+        guard let url = URL(string: "https://help.instagram.com/478745558852511/?helpref=hc_fnav") else { return }
+        let termsSafariView = SFSafariViewController(url: url)
+        
+        self.present(termsSafariView, animated: false)
+    }
+    
     @objc private func didTapCreateAccountButton() {}
 }
 
