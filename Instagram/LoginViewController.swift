@@ -63,12 +63,18 @@ class LoginViewController: UIViewController {
     
     private lazy var termsButton: UIButton = {
         
-        return UIButton()
+        let button = UIButton()
+        button.setTitle("Terms and Condition", for: .normal)
+        button.setTitleColor(.secondaryLabel, for: .normal)
+        return button
     }()
     
     private lazy var privacyButton: UIButton = {
         
-        return UIButton()
+        let button = UIButton()
+        button.setTitle("Privacy", for: .normal)
+        button.setTitleColor(.secondaryLabel, for: .normal)
+        return button
     }()
     
     private lazy var createAccountButton: UIButton = {
@@ -108,15 +114,37 @@ class LoginViewController: UIViewController {
             , height: self.headerView.frame.size.height - self.view.safeAreaInsets.top)
         return imageView
     }()
-
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         self.addSubviews()
+        
         self.view.backgroundColor = .systemBackground
         
         self.userNameField.delegate = self
         self.passwordField.delegate = self
+        
+        self.addButtonTargets()
+    }
+    
+    private func addButtonTargets() {
+        
+        self.loginButton.addTarget(self
+            , action: #selector(didTapLoginButton)
+            , for: .touchUpInside)
+        
+        self.createAccountButton.addTarget(self
+            , action: #selector(didTapCreateAccountButton)
+            , for: .touchUpInside)
+        
+        self.termsButton.addTarget(self
+            , action: #selector(didTapTermsButton)
+            , for: .touchUpInside)
+        
+        self.privacyButton.addTarget(self
+            , action: #selector(didTapPrivacyButton)
+            , for: .touchUpInside)
     }
     
     override func viewDidLayoutSubviews() {
@@ -124,24 +152,34 @@ class LoginViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         self.userNameField.frame = CGRect(x: 25
-            , y: self.headerView.frame.origin.y + self.headerView.frame.size.height + 10
+            , y: self.headerView.frame.origin.y + self.headerView.frame.size.height + 40
             , width: self.view.frame.size.width - 50
             , height: 52)
         
         self.passwordField.frame = CGRect(x: 25
-        , y: self.userNameField.frame.origin.y + self.userNameField.frame.size.height + 10
-        , width: self.view.frame.size.width - 50
-        , height: 52)
+            , y: self.userNameField.frame.origin.y + self.userNameField.frame.size.height + 10
+            , width: self.view.frame.size.width - 50
+            , height: 52)
         
         self.loginButton.frame = CGRect(x: 25
-        , y: self.passwordField.frame.origin.y + self.passwordField.frame.size.height + 10
-        , width: self.view.frame.size.width - 50
-        , height: 52)
+            , y: self.passwordField.frame.origin.y + self.passwordField.frame.size.height + 10
+            , width: self.view.frame.size.width - 50
+            , height: 52)
         
         self.createAccountButton.frame = CGRect(x: 25
-        , y: self.loginButton.frame.origin.y + self.loginButton.frame.size.height + 10
-        , width: self.view.frame.size.width - 50
-        , height: 52)
+            , y: self.loginButton.frame.origin.y + self.loginButton.frame.size.height + 10
+            , width: self.view.frame.size.width - 50
+            , height: 52)
+        
+        self.termsButton.frame = CGRect(x: 10
+            , y: self.view.frame.size.height - self.view.safeAreaInsets.bottom - 100
+            , width: self.view.frame.size.width - 20
+            , height: 50)
+        
+        self.privacyButton.frame = CGRect(x: 10
+        , y: self.view.frame.size.height - self.view.safeAreaInsets.bottom - 50
+        , width: self.view.frame.size.width - 20
+        , height: 50)
         
     }
     
@@ -165,4 +203,18 @@ class LoginViewController: UIViewController {
     @objc private func didTapCreateAccountButton() {}
 }
 
-extension LoginViewController: UITextFieldDelegate {}
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == userNameField {
+            
+            passwordField.becomeFirstResponder()
+        } else if textField == passwordField {
+            
+            didTapLoginButton()
+        }
+        
+        return true
+    }
+}
