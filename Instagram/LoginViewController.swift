@@ -197,7 +197,18 @@ class LoginViewController: UIViewController {
         self.headerView.addSubview(self.logoView)
     }
     
-    @objc private func didTapLoginButton() {}
+    @objc private func didTapLoginButton() {
+        
+        passwordField.resignFirstResponder()
+        
+        guard let userName = self.userNameField.text
+            , let password = self.passwordField.text
+            , !userName.isEmpty
+            , !password.isEmpty
+            , password.count >= 8 else { return }
+        
+        //TODO:- Implement Login Functionality
+    }
     @objc private func didTapPrivacyButton() {}
     @objc private func didTapTermsButton() {}
     @objc private func didTapCreateAccountButton() {}
@@ -212,7 +223,7 @@ extension LoginViewController: UITextFieldDelegate {
             passwordField.becomeFirstResponder()
         } else if textField == passwordField {
             
-            didTapLoginButton()
+            self.didTapLoginButton()
         }
         
         return true
