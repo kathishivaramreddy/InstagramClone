@@ -262,8 +262,12 @@ class LoginViewController: UIViewController {
     
     @objc private func didTapCreateAccountButton() {
         
-        let vc = RegistrationViewController()
-        self.present(vc, animated: true)
+        let registrationController = RegistrationViewController()
+        
+        let navigationController = UINavigationController(rootViewController: registrationController)
+        registrationController.title = "Create Account"
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true)
     }
 }
 
