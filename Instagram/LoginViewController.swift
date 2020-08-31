@@ -202,14 +202,48 @@ class LoginViewController: UIViewController {
         
         passwordField.resignFirstResponder()
         
-        guard let userName = self.userNameField.text
+        guard let userNameEmail = self.userNameField.text
             , let password = self.passwordField.text
-            , !userName.isEmpty
+            , !userNameEmail.isEmpty
             , !password.isEmpty
             , password.count >= 8 else { return }
         
         //TODO:- Implement Login Functionality
+        
+        var userName: String?
+        var email: String?
+        
+        if userNameEmail.contains("@") && userNameEmail.contains(".") {
+            
+            email =  userNameEmail
+        } else {
+            
+            userName = userNameEmail
+        }
+        
+        AuthManager.shared.login(userName: userName, email: email, password: password) { (result) in
+            
+            DispatchQueue.main.async {
+                
+                guard result else {
+                    
+                    let alert = UIAlertController(title: "Login Error"
+                        , message: "We are unable log you in"
+                        , preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "dismiss"
+                        , style: .cancel
+                        , handler: nil))
+                    self.present(alert, animated: false)
+                    return
+                    
+                }
+
+                self.dismiss(animated: true)
+            }
+        }
     }
+    
     @objc private func didTapPrivacyButton() {
         
         guard let url = URL(string: "https://help.instagram.com/519522125107875") else { return }
