@@ -7,3 +7,33 @@
 //
 
 import Foundation
+import FirebaseAuth
+
+public class AuthManager {
+    
+    static let shared = AuthManager()
+    
+    public func register(userName: String, email: String, password: String) {
+        
+    }
+    
+    public func login(userName: String?, email: String?, password: String, completion: @escaping (Bool) -> Void) {
+        
+        if let email = email {
+            
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                
+                guard error == nil else {
+                    
+                    completion(false)
+                    return
+                }
+                
+                completion(true)
+            }
+        } else if let userName = userName {
+            
+            
+        }
+    }
+}
