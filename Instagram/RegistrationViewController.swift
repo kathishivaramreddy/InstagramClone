@@ -110,7 +110,28 @@ class RegistrationViewController: UIViewController {
             , let email = emailField.text, !email.isEmpty
             , let password = passwordField.text, password.count >= 8 else { return }
         
-        AuthManager.shared.register(userName: userName, email: email, password: password)
+
+        AuthManager.shared.register(userName: userName, email: email, password: password) { registered in
+            
+            DispatchQueue.main.async {
+                
+                guard registered else {
+                    
+                    let alert = UIAlertController(title: "Registration Error"
+                        , message: "We are unable register you"
+                        , preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "dismiss"
+                        , style: .cancel
+                        , handler: nil))
+                    self.present(alert, animated: false)
+                    return
+                }
+                
+                
+                self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+            }
+        }
         
     }
     

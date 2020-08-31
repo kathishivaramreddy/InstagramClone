@@ -13,8 +13,40 @@ public class AuthManager {
     
     static let shared = AuthManager()
     
-    public func register(userName: String, email: String, password: String) {
+    public func register(userName: String, email: String, password: String, completion: @escaping (Bool) -> Void) {
         
+        DatabaseManager.shared.canCreateAccount(with: email
+            , userName: userName
+        , password: password) { (canCreate) in
+            
+            guard canCreate else {
+                
+                completion(false)
+                return
+            }
+            
+            Auth.auth().createUser(withEmail: email, password: userName) { (result, error) in
+                
+                guard error == nil, result != nil else {
+                    
+                    completion(false)
+                    return
+                }
+                
+                //Insert into db
+                DatabaseManager.shared.insertNewUser(with: email, userName: userName) { (inserted) in
+                    
+                    guard inserted else {
+                        
+                        completion(false)
+                        return
+                    }
+                    
+                    completion(true)
+                    return
+                }
+            }
+        }
     }
     
     public func login(userName: String?, email: String?, password: String, completion: @escaping (Bool) -> Void) {
