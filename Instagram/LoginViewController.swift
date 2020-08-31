@@ -260,7 +260,11 @@ class LoginViewController: UIViewController {
         self.present(termsSafariView, animated: false)
     }
     
-    @objc private func didTapCreateAccountButton() {}
+    @objc private func didTapCreateAccountButton() {
+        
+        let vc = RegistrationViewController()
+        self.present(vc, animated: true)
+    }
 }
 
 extension LoginViewController: UITextFieldDelegate {
