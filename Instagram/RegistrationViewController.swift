@@ -129,7 +129,7 @@ class RegistrationViewController: UIViewController {
                 }
                 
                 
-                self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+                self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
             }
         }
         
