@@ -178,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="949" y="69"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="Uk9-Oy-6TQ">
             <objects>
-                <viewController id="QOu-DZ-vdq" sceneMemberID="viewController">
+                <viewController id="QOu-DZ-vdq" customClass="ProfileViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r8T-80-ZsE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
