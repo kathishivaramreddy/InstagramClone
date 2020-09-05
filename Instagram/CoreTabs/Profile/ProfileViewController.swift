@@ -15,6 +15,7 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.navigationItem.title = "Profile"
         self.configureNavigationBar()
         
         self.setupCollectionViewLayout()
@@ -63,7 +64,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -162,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="200" y="50"/>
         </scene>
-        <!--View Controller-->
+        <!--Notifications View Controller-->
         <scene sceneID="EgY-hi-ze2">
             <objects>
-                <viewController id="4ut-ya-tBQ" sceneMemberID="viewController">
+                <viewController id="4ut-ya-tBQ" customClass="NotificationsViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Ep-dS-oRa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

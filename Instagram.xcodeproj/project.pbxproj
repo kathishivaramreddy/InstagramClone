@@ -15,6 +15,8 @@
 		F725108824FD868000E50844 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725108724FD868000E50844 /* String+Extension.swift */; };
 		F72510A62501754400E50844 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72510A52501754400E50844 /* SettingsViewController.swift */; };
 		F72510A82501839800E50844 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72510A72501839800E50844 /* ProfileViewController.swift */; };
+		F72510AA2503C92300E50844 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72510A92503C92300E50844 /* NotificationsViewController.swift */; };
+		F72510B12503CAD000E50844 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72510B02503CAD000E50844 /* NotificationTableViewCell.swift */; };
 		F7868B9524F83BF100BED833 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7868B9424F83BF100BED833 /* AppDelegate.swift */; };
 		F7868B9724F83BF100BED833 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7868B9624F83BF100BED833 /* SceneDelegate.swift */; };
 		F7868B9924F83BF100BED833 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7868B9824F83BF100BED833 /* HomeViewController.swift */; };
@@ -50,6 +52,8 @@
 		F725108724FD868000E50844 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F72510A52501754400E50844 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F72510A72501839800E50844 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F72510A92503C92300E50844 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		F72510B02503CAD000E50844 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		F7868B9124F83BF100BED833 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7868B9424F83BF100BED833 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7868B9624F83BF100BED833 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,53 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F72510AB2503C95200E50844 /* CoreTabs */ = {
+			isa = PBXGroup;
+			children = (
+				F7868B9824F83BF100BED833 /* HomeViewController.swift */,
+				F72510AF2503CABC00E50844 /* Notification */,
+				F72510AC2503CA2A00E50844 /* Profile */,
+			);
+			path = CoreTabs;
+			sourceTree = "<group>";
+		};
+		F72510AC2503CA2A00E50844 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F72510A72501839800E50844 /* ProfileViewController.swift */,
+				F72510A52501754400E50844 /* SettingsViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F72510AD2503CA4200E50844 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				F7868BBD24F9A11000BED833 /* LoginViewController.swift */,
+				F725108324FD6F6400E50844 /* AuthManager.swift */,
+				F725108524FD80D700E50844 /* DatabaseManager.swift */,
+				F725108124FD6ED100E50844 /* RegistrationViewController.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		F72510AE2503CA5100E50844 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F725108724FD868000E50844 /* String+Extension.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F72510AF2503CABC00E50844 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				F72510A92503C92300E50844 /* NotificationsViewController.swift */,
+				F72510B02503CAD000E50844 /* NotificationTableViewCell.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		F7868B8824F83BF100BED833 = {
 			isa = PBXGroup;
 			children = (
@@ -132,19 +183,14 @@
 				F7868BB924F8520400BED833 /* GoogleService-Info.plist */,
 				F7868B9424F83BF100BED833 /* AppDelegate.swift */,
 				F7868B9624F83BF100BED833 /* SceneDelegate.swift */,
-				F7868B9824F83BF100BED833 /* HomeViewController.swift */,
-				F72510A52501754400E50844 /* SettingsViewController.swift */,
-				F72510A72501839800E50844 /* ProfileViewController.swift */,
-				F7868BBD24F9A11000BED833 /* LoginViewController.swift */,
-				F725108324FD6F6400E50844 /* AuthManager.swift */,
-				F725108524FD80D700E50844 /* DatabaseManager.swift */,
-				F725108124FD6ED100E50844 /* RegistrationViewController.swift */,
+				F72510AB2503C95200E50844 /* CoreTabs */,
+				F72510AD2503CA4200E50844 /* OnBoarding */,
 				F7868B9A24F83BF100BED833 /* Main.storyboard */,
 				F7868BA024F83BF200BED833 /* Assets.xcassets */,
 				F7868BA224F83BF200BED833 /* LaunchScreen.storyboard */,
 				F7868BA524F83BF200BED833 /* Info.plist */,
 				F7868B9D24F83BF100BED833 /* Instagram.xcdatamodeld */,
-				F725108724FD868000E50844 /* String+Extension.swift */,
+				F72510AE2503CA5100E50844 /* Util */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -329,7 +375,9 @@
 			files = (
 				F725108624FD80D700E50844 /* DatabaseManager.swift in Sources */,
 				F725108824FD868000E50844 /* String+Extension.swift in Sources */,
+				F72510B12503CAD000E50844 /* NotificationTableViewCell.swift in Sources */,
 				F725108224FD6ED100E50844 /* RegistrationViewController.swift in Sources */,
+				F72510AA2503C92300E50844 /* NotificationsViewController.swift in Sources */,
 				F72510A62501754400E50844 /* SettingsViewController.swift in Sources */,
 				F7868B9F24F83BF100BED833 /* Instagram.xcdatamodeld in Sources */,
 				F7868B9924F83BF100BED833 /* HomeViewController.swift in Sources */,
