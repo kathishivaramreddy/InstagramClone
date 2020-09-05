@@ -79,7 +79,7 @@ class SettingsViewController: UIViewController {
                     }
                 } else {
                     
-                    
+                    fatalError("Logout Unsuccessful")
                 }
             }
         }))
